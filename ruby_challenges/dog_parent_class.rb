@@ -32,7 +32,7 @@ end
 class Volunteer < Dog
 
   def set_organization=(organization_name)
-    @organization_name
+    @organization_name = organization_name
   end
 
   def get_organization
@@ -43,16 +43,13 @@ end
 class Security < Dog
 
   def set_agency=(agency_name)
-    @agency_name
+    @agency_name = agency_name
   end
 
   def get_agency
     return @agency_name
   end
 end
-
-
-
 
 my_first_dog = Dog.new
 my_first_dog.set_name= "Lucky"
@@ -71,5 +68,15 @@ second_dog_breed = my_second_dog.get_breed
 second_dog_organization = my_second_dog.get_organization
 puts "#{second_dog_name} says I'm a #{dog_breed}! and I volunteer at #{second_dog_organization} #{my_second_dog.bark}"
 
+my_third_dog = Security.new
+my_third_dog.set_name= "Rocco"
+my_third_dog.set_breed= "German Shepard"
+my_third_dog.set_agency = "Johnny's Garage"
+third_dog_name = my_third_dog.get_name
+third_dog_breed = my_third_dog.get_breed
+third_dog_agency = my_third_dog.get_agency
+puts "#{third_dog_name} says I'm a #{dog_breed}! and I enforce at #{third_dog_agency} #{my_third_dog.bark}"
+
 puts my_first_dog.inspect
 puts my_second_dog.inspect
+puts my_third_dog.inspect
