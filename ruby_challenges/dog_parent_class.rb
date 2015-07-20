@@ -1,5 +1,4 @@
 class Dog
-
   def set_name=(dog_name)
     @name = dog_name
   end
@@ -30,22 +29,18 @@ class Dog
 end
 
 class Volunteer < Dog
-
   def set_organization=(organization_name)
     @organization_name = organization_name
   end
-
   def get_organization
     return @organization_name
   end
 end
 
 class Security < Dog
-
   def set_agency=(agency_name)
     @agency_name = agency_name
   end
-
   def get_agency
     return @agency_name
   end
@@ -57,7 +52,6 @@ my_first_dog.set_breed= "Collie"
 dog_name = my_first_dog.get_name
 dog_breed = my_first_dog.get_breed
 puts "#{dog_name} says I'm a #{dog_breed}! #{my_first_dog.bark}"
-
 
 my_second_dog = Volunteer.new
 my_second_dog.set_name= "Serenity"
